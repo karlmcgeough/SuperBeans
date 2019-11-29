@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import JGProgressHUD
 
 class ItemsTableViewController: UITableViewController {
 
@@ -15,7 +16,8 @@ class ItemsTableViewController: UITableViewController {
     var category: Category?
     
     var itemArray: [Items] = []
-    
+     var item: Items!
+    let hud = JGProgressHUD(style: .light)
     
     //MARK: View Lifecycle
     
@@ -38,10 +40,10 @@ class ItemsTableViewController: UITableViewController {
 
     // MARK: - Table view data source
 
-   /* override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        //return itemArray.count
-    }*/
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        showItemView(itemArray[indexPath.row])
+    }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
@@ -57,7 +59,6 @@ class ItemsTableViewController: UITableViewController {
         return cell
     }
 
-
     
     // MARK: - Navigation
 
@@ -68,7 +69,16 @@ class ItemsTableViewController: UITableViewController {
         }
     }
     
+    private func showItemView(_ item: Items){
+        let itemDetailVC = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(identifier: "itemDetailView") as! ItemDetailsViewController
+        itemDetailVC.item = item
+        
+        self.navigationController?.pushViewController(itemDetailVC, animated: true)
+    }
+    
 
+    
+    
     //MARK: download Items
     private func downloadItems(){
         downloadItemsFromFirebase(category!.id) { (allItems) in
@@ -78,3 +88,4 @@ class ItemsTableViewController: UITableViewController {
         }
    }
 }
+

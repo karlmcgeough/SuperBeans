@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import UserNotifications
 
 class CategoryCollectionViewController: UICollectionViewController {
 
@@ -19,6 +20,32 @@ class CategoryCollectionViewController: UICollectionViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        let center = UNUserNotificationCenter.current()
+        
+        center.requestAuthorization(options: [.alert, .sound])
+        { (granted, error) in
+            
+            
+        }
+        
+        let content = UNMutableNotificationContent()
+        content.title = "Hey Time To Order?"
+        content.body = "Time to order your fix now!"
+        
+        let date = Date().addingTimeInterval(60)
+        
+        let dateComponents = Calendar.current.dateComponents([.year, .month, .day, .hour, .minute, .second], from: date)
+        
+        let trigger = UNCalendarNotificationTrigger(dateMatching: dateComponents, repeats: false)
+        
+        let uuidString = UUID().uuidString
+      let request =  UNNotificationRequest(identifier: uuidString, content: content, trigger: trigger)
+        
+        center.add(request) { (error) in
+            
+        }
+        
+       // navigationController?.navigationBar.barTintColor = UIColor(cgColor: #)
         //download category
         downloadCategoriesFromFirebase {(allCategories) in
                 print("call Back is Completed")

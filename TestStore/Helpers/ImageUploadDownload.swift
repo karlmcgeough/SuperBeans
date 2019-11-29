@@ -11,6 +11,7 @@ import FirebaseStorage
 
 let storage = Storage.storage()
 
+//MARK: Uploading Image To Firebase Firestore
 func uploadImage(images: [UIImage?], itemId: String, completion: @escaping(_ imageLinks: [String]) -> Void){
     
     if Reachabilty.HasConnection() {
@@ -45,6 +46,7 @@ func uploadImage(images: [UIImage?], itemId: String, completion: @escaping(_ ima
     }
 }
 
+//MARK: Saving Images To firebase storage
 func saveImagesToFirebaseStorage(imageData: Data, fileName:String, completion: @escaping(_ imageLink: String?) -> Void){
     
     var task: StorageUploadTask!
@@ -73,7 +75,7 @@ func saveImagesToFirebaseStorage(imageData: Data, fileName:String, completion: @
         })
     }
 
-
+//MARK: Downloading Images
 func downloadImages(imageUrls: [String], completion: @escaping (_ images: [UIImage?]) -> Void) {
     
     var imageArray: [UIImage] = []
