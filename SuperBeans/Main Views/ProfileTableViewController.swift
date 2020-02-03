@@ -31,8 +31,9 @@ class ProfileTableViewController: UITableViewController {
         super.viewDidAppear(animated)
         
         //Check logged in status
+        checkLoginStatus()
         checkOnboardingStatus()
-       checkLoginStatus()
+       
         
         
     }
@@ -72,6 +73,7 @@ class ProfileTableViewController: UITableViewController {
                    finishRegBtnOutlet.setTitle("Finish registration", for: .normal)
                    finishRegBtnOutlet.isEnabled = true
                 finishRegBtnOutlet.tintColor = .red
+                
                }
             orderHistoryBtnOutlet.isEnabled = true
                

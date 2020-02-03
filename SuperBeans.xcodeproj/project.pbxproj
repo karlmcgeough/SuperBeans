@@ -35,6 +35,7 @@
 		B9AFB84C23918CFB00576F53 /* Favourites.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9AFB84B23918CFB00576F53 /* Favourites.swift */; };
 		B9AFB84E23956C5200576F53 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B9AFB84D23956C5200576F53 /* GoogleService-Info.plist */; };
 		B9B58EB223E4E52A009AC7D3 /* (null) in Embed Frameworks */ = {isa = PBXBuildFile; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		B9C5BD1123E769FB008C1739 /* FavouritesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9C5BD1023E769FB008C1739 /* FavouritesTableViewController.swift */; };
 		B9CF141623759BEB00E016B7 /* Order.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9CF141523759BEB00E016B7 /* Order.swift */; };
 		B9E4089023E4BE200098175A /* (null) in Embed Frameworks */ = {isa = PBXBuildFile; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B9F3F3C72350D836004E089C /* HelperFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F3F3C62350D836004E089C /* HelperFunctions.swift */; };
@@ -98,6 +99,7 @@
 		B9AFB84B23918CFB00576F53 /* Favourites.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Favourites.swift; sourceTree = "<group>"; };
 		B9AFB84D23956C5200576F53 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		B9B58EAC23E4E397009AC7D3 /* CTHelp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = CTHelp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B9C5BD1023E769FB008C1739 /* FavouritesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouritesTableViewController.swift; sourceTree = "<group>"; };
 		B9CF141523759BEB00E016B7 /* Order.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Order.swift; sourceTree = "<group>"; };
 		B9F3F3C62350D836004E089C /* HelperFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelperFunctions.swift; sourceTree = "<group>"; };
 		B9F3F3C82350DF3D004E089C /* ItemDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemDetailsViewController.swift; sourceTree = "<group>"; };
@@ -209,6 +211,7 @@
 				B9981D41234E89CB003AB74B /* LocationsViewController.swift */,
 				B9F3F3C82350DF3D004E089C /* ItemDetailsViewController.swift */,
 				B9F3F3CE23510B52004E089C /* BasketViewController.swift */,
+				B9C5BD1023E769FB008C1739 /* FavouritesTableViewController.swift */,
 				B91C312123E319B200CC1EE7 /* Login View Folder */,
 				B91C311D23DCAC6500CC1EE7 /* ProfileTableViewController.swift */,
 				B99DD8E323E330C100DB76B6 /* EditProfileViewController.swift */,
@@ -373,6 +376,7 @@
 				B938681C23E6514200710EFC /* PreviousOrdersTableViewController.swift in Sources */,
 				B978A6F8234BF50C009A12C3 /* ItemTableViewCell.swift in Sources */,
 				B91C312023DCB70D00CC1EE7 /* FinishRegistrationViewController.swift in Sources */,
+				B9C5BD1123E769FB008C1739 /* FavouritesTableViewController.swift in Sources */,
 				B9981D42234E89CB003AB74B /* LocationsViewController.swift in Sources */,
 				B9F3F3CF23510B52004E089C /* BasketViewController.swift in Sources */,
 				B9F3F3CB2350E43F004E089C /* DetailImageCollectionViewCell.swift in Sources */,
