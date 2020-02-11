@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		B6AE8ED3C484E34D40BD7FA2 /* Pods_SuperBeans.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7FD32BEC12798771E65FE255 /* Pods_SuperBeans.framework */; };
+		34B58343676C4EC43A3F4F2F /* Pods_SuperBeans.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE2443F4ED3FB7A210842E74 /* Pods_SuperBeans.framework */; };
 		B91C311E23DCAC6500CC1EE7 /* ProfileTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B91C311D23DCAC6500CC1EE7 /* ProfileTableViewController.swift */; };
 		B91C312023DCB70D00CC1EE7 /* FinishRegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B91C311F23DCB70D00CC1EE7 /* FinishRegistrationViewController.swift */; };
 		B938681C23E6514200710EFC /* PreviousOrdersTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B938681B23E6514200710EFC /* PreviousOrdersTableViewController.swift */; };
@@ -61,9 +61,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		7FD32BEC12798771E65FE255 /* Pods_SuperBeans.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SuperBeans.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		888A6C546995050F5E14FA3A /* Pods-SuperBeans.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SuperBeans.release.xcconfig"; path = "Target Support Files/Pods-SuperBeans/Pods-SuperBeans.release.xcconfig"; sourceTree = "<group>"; };
-		AE018E36D6FE3A53F256C89A /* Pods-SuperBeans.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SuperBeans.debug.xcconfig"; path = "Target Support Files/Pods-SuperBeans/Pods-SuperBeans.debug.xcconfig"; sourceTree = "<group>"; };
+		9523F51723509924DA743691 /* Pods-SuperBeans.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SuperBeans.debug.xcconfig"; path = "Target Support Files/Pods-SuperBeans/Pods-SuperBeans.debug.xcconfig"; sourceTree = "<group>"; };
+		AE2443F4ED3FB7A210842E74 /* Pods_SuperBeans.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SuperBeans.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B91C311D23DCAC6500CC1EE7 /* ProfileTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTableViewController.swift; sourceTree = "<group>"; };
 		B91C311F23DCB70D00CC1EE7 /* FinishRegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinishRegistrationViewController.swift; sourceTree = "<group>"; };
 		B938681B23E6514200710EFC /* PreviousOrdersTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviousOrdersTableViewController.swift; sourceTree = "<group>"; };
@@ -99,6 +98,7 @@
 		B9AFB84B23918CFB00576F53 /* Favourites.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Favourites.swift; sourceTree = "<group>"; };
 		B9AFB84D23956C5200576F53 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		B9B58EAC23E4E397009AC7D3 /* CTHelp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = CTHelp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B9B728FE23E9CF69000CEA83 /* libJGProgressHUD.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libJGProgressHUD.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		B9C5BD1023E769FB008C1739 /* FavouritesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouritesTableViewController.swift; sourceTree = "<group>"; };
 		B9CF141523759BEB00E016B7 /* Order.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Order.swift; sourceTree = "<group>"; };
 		B9F3F3C62350D836004E089C /* HelperFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelperFunctions.swift; sourceTree = "<group>"; };
@@ -106,6 +106,7 @@
 		B9F3F3CA2350E43F004E089C /* DetailImageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailImageCollectionViewCell.swift; sourceTree = "<group>"; };
 		B9F3F3CC2350FE56004E089C /* Basket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Basket.swift; sourceTree = "<group>"; };
 		B9F3F3CE23510B52004E089C /* BasketViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasketViewController.swift; sourceTree = "<group>"; };
+		F45B23ED9A8D1913205BB951 /* Pods-SuperBeans.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SuperBeans.release.xcconfig"; path = "Target Support Files/Pods-SuperBeans/Pods-SuperBeans.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,7 +114,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B6AE8ED3C484E34D40BD7FA2 /* Pods_SuperBeans.framework in Frameworks */,
+				34B58343676C4EC43A3F4F2F /* Pods_SuperBeans.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -123,6 +124,7 @@
 		11D9C341677DAEBE019AA1DA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B9B728FE23E9CF69000CEA83 /* libJGProgressHUD.a */,
 				B9AE624223E4E85F003FDA40 /* CTHelp.framework */,
 				B9B58EAC23E4E397009AC7D3 /* CTHelp.framework */,
 				B972CC1923E4D9B10005E627 /* CTHelp.framework */,
@@ -130,7 +132,7 @@
 				B972CC1123E4D9230005E627 /* CTHelp.bundle */,
 				B9894E8A23E4C02500F492ED /* EmptyDataSet_Swift.framework */,
 				B9894E8723E4C00200F492ED /* absl.framework */,
-				7FD32BEC12798771E65FE255 /* Pods_SuperBeans.framework */,
+				AE2443F4ED3FB7A210842E74 /* Pods_SuperBeans.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -138,8 +140,8 @@
 		43216A62A616F875439BB427 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				AE018E36D6FE3A53F256C89A /* Pods-SuperBeans.debug.xcconfig */,
-				888A6C546995050F5E14FA3A /* Pods-SuperBeans.release.xcconfig */,
+				9523F51723509924DA743691 /* Pods-SuperBeans.debug.xcconfig */,
+				F45B23ED9A8D1913205BB951 /* Pods-SuperBeans.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -250,12 +252,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B9A64EE6234A90E100118FEA /* Build configuration list for PBXNativeTarget "SuperBeans" */;
 			buildPhases = (
-				F796B7C3F7B5A4EDABFC7586 /* [CP] Check Pods Manifest.lock */,
+				D06755F19C913A32FDD87616 /* [CP] Check Pods Manifest.lock */,
 				B9A64ECE234A90DF00118FEA /* Sources */,
 				B9A64ECF234A90DF00118FEA /* Frameworks */,
 				B9A64ED0234A90DF00118FEA /* Resources */,
 				B9E4089123E4BE200098175A /* Embed Frameworks */,
-				019C2885DCFA28DE2A1215F3 /* [CP] Embed Pods Frameworks */,
+				DF9152D614AFF3DE6627D6CD /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -314,24 +316,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		019C2885DCFA28DE2A1215F3 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-SuperBeans/Pods-SuperBeans-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-SuperBeans/Pods-SuperBeans-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SuperBeans/Pods-SuperBeans-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		F796B7C3F7B5A4EDABFC7586 /* [CP] Check Pods Manifest.lock */ = {
+		D06755F19C913A32FDD87616 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -351,6 +336,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DF9152D614AFF3DE6627D6CD /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SuperBeans/Pods-SuperBeans-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SuperBeans/Pods-SuperBeans-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SuperBeans/Pods-SuperBeans-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -530,7 +532,7 @@
 		};
 		B9A64EE7234A90E100118FEA /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = AE018E36D6FE3A53F256C89A /* Pods-SuperBeans.debug.xcconfig */;
+			baseConfigurationReference = 9523F51723509924DA743691 /* Pods-SuperBeans.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "Apple Development";
@@ -555,7 +557,7 @@
 		};
 		B9A64EE8234A90E100118FEA /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 888A6C546995050F5E14FA3A /* Pods-SuperBeans.release.xcconfig */;
+			baseConfigurationReference = F45B23ED9A8D1913205BB951 /* Pods-SuperBeans.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "Apple Development";
