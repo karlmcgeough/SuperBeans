@@ -14,6 +14,7 @@ class Basket {
     var ownerId: String!
     var itemIds: [String]!
     var itemNames: [String]!
+    var ownerName: String!
     
     init() {
         
@@ -24,6 +25,7 @@ class Basket {
          ownerId = _dictionary[kOWNERID] as? String
          itemIds = _dictionary[kITEMSIDS] as? [String]
         itemNames = _dictionary[kNAME] as? [String]
+        ownerName = _dictionary[kFULLNAME] as? String
         
     }
 }
@@ -55,7 +57,7 @@ func downloadBasket(_ ownerId: String, completion: @escaping(_ basket: Basket?)-
 
 func basketDictionaryFrom(_ basket: Basket) -> NSDictionary {
     
-    return NSDictionary(objects: [basket.id, basket.ownerId, basket.itemIds, basket.itemNames], forKeys: [kOBJECTID as NSCopying, kOWNERID as NSCopying, kITEMSIDS as NSCopying, kNAME as NSCopying])
+    return NSDictionary(objects: [basket.id, basket.ownerId, basket.itemIds, basket.itemNames, basket.ownerName], forKeys: [kOBJECTID as NSCopying, kOWNERID as NSCopying, kITEMSIDS as NSCopying, kNAME as NSCopying, kFULLNAME as NSCopying])
 }
 
 //MARK: Updating Basket

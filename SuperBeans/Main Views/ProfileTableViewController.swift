@@ -30,10 +30,11 @@ class ProfileTableViewController: UITableViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
+        
         //Check logged in status
         checkLoginStatus()
         checkOnboardingStatus()
-       
+        tableView.reloadData()
         
         
     }

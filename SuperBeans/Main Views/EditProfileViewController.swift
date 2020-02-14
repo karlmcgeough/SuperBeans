@@ -33,7 +33,37 @@ class EditProfileViewController: UIViewController {
     //MARK: Actions
     
     @IBAction func saveBarBtnPressed(_ sender: Any) {
+        dismissKeyboard()
         
+        if textFieldsHaveText() {
+            
+            let withValues = [kFIRSTNAME : editFirstNameTxt.text!, kLASTNAME : editLastNameTxt.text!, kFULLNAME : (editFirstNameTxt.text! + " " + editLastNameTxt.text!), kFULLADDRESS : editAddressTxt.text!]
+            
+            updateCurrentUserInFirestore(withValues: withValues) { (error) in
+                
+                if error == nil {
+                    self.hud.textLabel.text = "Updated!"
+                    self.hud.indicatorView = JGProgressHUDSuccessIndicatorView()
+                    self.hud.show(in: self.view)
+                    self.hud.dismiss(afterDelay: 2.0)
+                    
+                } else {
+                    print("erro updating user ", error!.localizedDescription)
+                   self.hud.textLabel.text = error!.localizedDescription
+                   self.hud.indicatorView = JGProgressHUDErrorIndicatorView()
+                   self.hud.show(in: self.view)
+                   self.hud.dismiss(afterDelay: 2.0)
+                }
+            }
+            
+        }
+        else {
+            hud.textLabel.text = "All fields are required!"
+            hud.indicatorView = JGProgressHUDErrorIndicatorView()
+            hud.show(in: self.view)
+            hud.dismiss(afterDelay: 2.0)
+            
+        }
         
     }
     
@@ -72,6 +102,16 @@ class EditProfileViewController: UIViewController {
                 editAddressTxt.text = currentUser.fullAddress
             }
         }
+
+    //MARK: - Helper funcs
+    private func dismissKeyboard() {
+        self.view.endEditing(false)
+    }
+
+    private func textFieldsHaveText() -> Bool {
+        
+        return (editFirstNameTxt.text != "" && editLastNameTxt.text != "" && editAddressTxt.text != "")
+    }
 
         
     }

@@ -32,6 +32,9 @@ class BasketViewController: UIViewController, UIPickerViewDelegate, UIPickerView
         var purchasedItemIds : [String] = []
     var pickerData: [String] = [String]()
     var orderTime = Int()
+    var collection: String = ""
+//    let currentTime = Date().toMillis()
+
     
         let hud = JGProgressHUD(style: .dark)
         
@@ -62,6 +65,7 @@ class BasketViewController: UIViewController, UIPickerViewDelegate, UIPickerView
             //MARK: Check if user is logged in
             if MUser.currentUser() != nil {
                 loadBasketFromFirestore()
+                self.checkoutButtonStatus()
             }else {
                 disableCheckoutBtn()
                 showLoginView()
@@ -69,7 +73,7 @@ class BasketViewController: UIViewController, UIPickerViewDelegate, UIPickerView
                 
             }
             
-           // currentTime()
+           
         }
     //Time slider
     @IBAction func sliderAction(_ sender: Any) {
@@ -78,6 +82,7 @@ class BasketViewController: UIViewController, UIPickerViewDelegate, UIPickerView
         orderTime = myInt
         timeLbl.text = "\(myInt) Mins"
     }
+    
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
            return 1
@@ -101,9 +106,12 @@ class BasketViewController: UIViewController, UIPickerViewDelegate, UIPickerView
                    tempFunction()
                    
                    addItemsToPurchaseHistory(self.purchasedItemIds)
+            currentCollectionTime(duration: Double(orderTime))
                    createNewOrder()
                    emptyTheBasket()
-
+                    clearBasket()
+            
+                   
                } else {
                    
                    self.hud.textLabel.text = "Please complete you profile!"
@@ -140,8 +148,10 @@ class BasketViewController: UIViewController, UIPickerViewDelegate, UIPickerView
         order.ownerId = basket?.ownerId
         order.itemsIds = basket?.itemIds
         order.orderLocation = selectedLocation
-        order.collectionTime = ("\(orderTime) Mins")
+//        order.collectionTime = ("\(orderTime) Mins")
+        order.collectionTime = collection
         order.itemNames = basket?.itemNames
+        order.ownerName = basket?.ownerName
                 
                saveOrderToFirebase(order)
         
@@ -187,20 +197,21 @@ class BasketViewController: UIViewController, UIPickerViewDelegate, UIPickerView
            }
        }
     
-    func currentTime(){
+    func currentCollectionTime(duration: Double){
+          
+       let minuteConvert = (duration * 60)
+        var date = Date().addingTimeInterval(minuteConvert)
         
-        //getting current date/time
-        let currentDateTime = Date()
+        let dateComponents = Calendar.current.dateComponents([.hour, .minute], from: date)
         
-        //initailse date formatter and set the style
         let formatter = DateFormatter()
-        formatter.timeStyle = .medium
+        formatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
         
-        //gets the date and time string from date object
-        let timeString = formatter.string(from: currentDateTime)
+        let dateString = formatter.string(from: date)
+        let myDate = formatter.date(from: dateString)
+        formatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
         
-        
-        currentTimeLbl.text = timeString
+        collection = formatter.string(from: myDate!)
     }
     //MARK: - Helper functions
     
@@ -237,7 +248,7 @@ class BasketViewController: UIViewController, UIPickerViewDelegate, UIPickerView
         checkOutButtonOutlet.isEnabled = allItems.count > 0
         
         if checkOutButtonOutlet.isEnabled{
-            checkOutButtonOutlet.backgroundColor = #colorLiteral(red: 0.9709146619, green: 0.4951640368, blue: 0.4780865908, alpha: 0.8470588235)
+            checkOutButtonOutlet.backgroundColor = #colorLiteral(red: 0.9725490196, green: 0.4941176471, blue: 0.4784313725, alpha: 0.8470588235)
         }else {
             disableCheckoutBtn()
         }
@@ -265,8 +276,9 @@ class BasketViewController: UIViewController, UIPickerViewDelegate, UIPickerView
         tableView.reloadData()
         
         basket!.itemIds = []
+        basket!.itemNames = []
         
-        updateBasketInFirestore(basket!, withValues: [kITEMSIDS : basket!.itemIds]) { (error) in
+        updateBasketInFirestore(basket!, withValues: [kITEMSIDS : basket!.itemIds, kNAME : basket!.itemNames]) { (error) in
             
             if error != nil {
                 print("Error updating basket ", error!.localizedDescription)
@@ -301,6 +313,7 @@ class BasketViewController: UIViewController, UIPickerViewDelegate, UIPickerView
         tableView.reloadData()
         
         basket?.itemIds = []
+        basket?.itemNames = []
         
         updateBasketInFirestore(basket!, withValues: [kITEMSIDS: basket!.itemIds!]) { (error) in
             if error != nil {
@@ -312,6 +325,16 @@ class BasketViewController: UIViewController, UIPickerViewDelegate, UIPickerView
     }
 
 //MARK: Extensions
+
+
+    extension Double
+    {
+        func truncate(places : Int)-> Double
+        {
+            return Double(floor(pow(10.0, Double(places)) * self)/pow(10.0, Double(places)))
+        }
+}
+
 
     extension BasketViewController: UITableViewDataSource, UITableViewDelegate {
         
@@ -394,3 +417,5 @@ class BasketViewController: UIViewController, UIPickerViewDelegate, UIPickerView
         
         
     }
+
+

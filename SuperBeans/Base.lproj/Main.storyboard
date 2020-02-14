@@ -180,6 +180,7 @@
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" red="0.95294117649999999" green="0.4039215686" blue="0.4039215686" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="YxS-Km-0nY" firstAttribute="trailing" secondItem="9Es-da-he4" secondAttribute="trailing" id="4Do-a0-VF3"/>
                             <constraint firstItem="nFb-IR-a2I" firstAttribute="top" secondItem="nlH-oQ-ZeL" secondAttribute="bottom" constant="35" id="91k-rL-5t2"/>
@@ -229,6 +230,22 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Fo4-Fl-YLo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2637.5999999999999" y="1468.2266009852217"/>
+        </scene>
+        <!--Terms and Conditions-->
+        <scene sceneID="l4A-3W-NZj">
+            <objects>
+                <viewController id="I8x-8G-vxT" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="mwo-G1-Rho">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="Kp7-Tr-4pQ"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Terms and Conditions" id="317-Ij-Sp4"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Urj-vh-dz7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3586" y="1510"/>
         </scene>
         <!--Locations-->
         <scene sceneID="Wuu-cj-MPO">
@@ -968,6 +985,9 @@
                                                     <state key="normal" title="Terms and Conditions">
                                                         <color key="titleColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     </state>
+                                                    <connections>
+                                                        <segue destination="I8x-8G-vxT" kind="show" id="6Zc-bb-2nM"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                             <constraints>
@@ -1195,7 +1215,7 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
                                 <state key="normal" title="Logout">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
                                     <action selector="logoutBtnPressed:" destination="ZkT-Ie-et4" eventType="touchUpInside" id="ayW-fU-Kn3"/>
@@ -1246,8 +1266,9 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="maP-r0-6u8">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.95294117649999999" green="0.4039215686" blue="0.4039215686" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
                         <textAttributes key="titleTextAttributes">
-                            <color key="textColor" red="0.95294117649999999" green="0.4039215686" blue="0.4039215686" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -1268,5 +1289,5 @@
         <image name="icons8-user-30" width="30" height="30"/>
         <image name="star.fill" catalog="system" width="64" height="58"/>
     </resources>
-    <color key="tintColor" red="0.95294117649999999" green="0.4039215686" blue="0.4039215686" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
+    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
 </document>

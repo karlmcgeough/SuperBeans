@@ -23,8 +23,10 @@ class ItemDetailsViewController: UIViewController {
         
     //Vars
     var item: Items!
+    var user: MUser!
     var itemImage: [UIImage] = []
     let hud = JGProgressHUD(style: .dark)
+     let currentUser = MUser.currentUser()
     
     private let sectionInsets = UIEdgeInsets(top: 0.0, left: 0.0, bottom: 00.0, right: 0.0)
     private let cellHeight : CGFloat = 198
@@ -89,11 +91,14 @@ class ItemDetailsViewController: UIViewController {
         if MUser.currentUser() != nil {
             downloadBasket(MUser.currentId()) { (basket) in
                            
+               
+                
                            if basket == nil {
                                self.createNewBasket()
                            } else {
                                basket!.itemIds.append(self.item.id)
-                               self.updateBasket(basket: basket!, withValues: [kITEMSIDS : basket!.itemIds])
+                            basket!.itemNames.append(self.item.name)
+                            self.updateBasket(basket: basket!, withValues: [kITEMSIDS : basket!.itemIds, kNAME : basket!.itemNames])
                            }
                        }
                   
@@ -146,6 +151,9 @@ class ItemDetailsViewController: UIViewController {
            newBasket.id = UUID().uuidString
         newBasket.ownerId = MUser.currentId()
            newBasket.itemIds = [self.item.id]
+        newBasket.itemNames = [self.item.name]
+        newBasket.ownerName = (self.currentUser!.fullName)
+        //newBasket.ownerName = user.firstName
            saveBasketToFirebase(newBasket)
            
            self.hud.textLabel.text = "Added to basket!"
@@ -228,3 +236,5 @@ extension ItemDetailsViewController: UICollectionViewDelegateFlowLayout{
         return sectionInsets.left
     }
 }
+
+
