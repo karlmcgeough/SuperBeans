@@ -11,7 +11,7 @@ import FirebaseFirestore
 
 //List of collections within firebase for app
 enum fCollectionReference: String {
-    case User
+    case RegularUser
     case Category
     case Items
     case Basket

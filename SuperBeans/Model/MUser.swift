@@ -183,7 +183,7 @@ class func registerUserWith(email: String, password: String, completion: @escapi
 
 func downloadUserFromFirestore(userId: String, email: String) {
     
-    FirebaseReference(.User).document(userId).getDocument { (snapshot, error) in
+    FirebaseReference(.RegularUser).document(userId).getDocument { (snapshot, error) in
         
         guard let snapshot = snapshot else { return }
         
@@ -207,7 +207,7 @@ func downloadUserFromFirestore(userId: String, email: String) {
 
 func saveUserToFirestore(mUser: MUser) {
     
-    FirebaseReference(.User).document(mUser.objectId).setData(userDictionaryFrom(user: mUser) as! [String : Any]) { (error) in
+    FirebaseReference(.RegularUser).document(mUser.objectId).setData(userDictionaryFrom(user: mUser) as! [String : Any]) { (error) in
         
         if error != nil {
             print("error saving user \(error!.localizedDescription)")
@@ -237,7 +237,7 @@ func updateCurrentUserInFirestore(withValues: [String : Any], completion: @escap
         let userObject = (dictionary as! NSDictionary).mutableCopy() as! NSMutableDictionary
         userObject.setValuesForKeys(withValues)
         
-        FirebaseReference(.User).document(MUser.currentId()).updateData(withValues) { (error) in
+        FirebaseReference(.RegularUser).document(MUser.currentId()).updateData(withValues) { (error) in
             
             completion(error)
             
