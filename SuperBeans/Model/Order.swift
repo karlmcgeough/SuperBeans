@@ -17,6 +17,8 @@ class Order {
     var collectionTime: String!
     var itemNames: [String]!
     var ownerName: String!
+    var orderCompleted: Bool!
+    var comments: String!
     
     init() {
            
@@ -30,6 +32,8 @@ class Order {
             collectionTime = _dictionary[kCOLLECTIONTIME] as? String
         itemNames = _dictionary[kNAME] as? [String]
         ownerName = _dictionary[kFULLNAME] as? String
+        orderCompleted = _dictionary[kORDERCOMPLETED] as? Bool
+        comments = _dictionary[kCOMMENTS] as? String
         //need to add user id
            
        }
@@ -42,5 +46,5 @@ func saveOrderToFirebase(_ order: Order){
 
 func orderDictionaryFrom(_ order: Order) -> NSDictionary {
     
-    return NSDictionary(objects: [order.id, order.ownerId, order.itemsIds, order.orderLocation, order.collectionTime, order.itemNames, order.ownerName], forKeys: [kOBJECTID as NSCopying, kOWNERID as NSCopying, kITEMSIDS as NSCopying, kORDERLOCATION as NSCopying, kCOLLECTIONTIME as NSCopying, kNAME as NSCopying, kFULLNAME as NSCopying])
+    return NSDictionary(objects: [order.id, order.ownerId, order.itemsIds, order.orderLocation, order.collectionTime, order.itemNames, order.ownerName, order.orderCompleted], forKeys: [kOBJECTID as NSCopying, kOWNERID as NSCopying, kITEMSIDS as NSCopying, kORDERLOCATION as NSCopying, kCOLLECTIONTIME as NSCopying, kNAME as NSCopying, kFULLNAME as NSCopying, kORDERCOMPLETED as NSCopying])
 }

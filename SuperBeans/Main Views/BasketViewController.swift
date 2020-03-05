@@ -152,6 +152,7 @@ class BasketViewController: UIViewController, UIPickerViewDelegate, UIPickerView
         order.collectionTime = collection
         order.itemNames = basket?.itemNames
         order.ownerName = basket?.ownerName
+        order.orderCompleted = false
                 
                saveOrderToFirebase(order)
         

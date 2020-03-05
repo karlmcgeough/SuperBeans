@@ -34,12 +34,14 @@ public let kIMAGELINKS = "imageLinks"
 
 public let kOWNERID = "ownerId"
 public let kITEMSIDS = "itemsIds"
+public let kCOMMENTS = "comments"
 
 //Order
 
 public let kOrderID = "orderId"
 public let kORDERLOCATION = "orderLocation"
 public let kCOLLECTIONTIME = "collectionTime"
+public let kORDERCOMPLETED = "orderCompleted"
 
 //Favourites
 

@@ -15,6 +15,7 @@ class Basket {
     var itemIds: [String]!
     var itemNames: [String]!
     var ownerName: String!
+    var comments: String!
     
     init() {
         
@@ -26,6 +27,7 @@ class Basket {
          itemIds = _dictionary[kITEMSIDS] as? [String]
         itemNames = _dictionary[kNAME] as? [String]
         ownerName = _dictionary[kFULLNAME] as? String
+        comments = _dictionary[kCOMMENTS] as? String
         
     }
 }
