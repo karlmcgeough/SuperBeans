@@ -231,21 +231,32 @@
             </objects>
             <point key="canvasLocation" x="2637.5999999999999" y="1468.2266009852217"/>
         </scene>
-        <!--Terms and Conditions-->
+        <!--Help-->
         <scene sceneID="l4A-3W-NZj">
             <objects>
                 <viewController id="I8x-8G-vxT" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="mwo-G1-Rho">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Nd-SQ-i3S">
+                                <rect key="frame" x="20" y="112" width="374" height="280"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <mutableString key="text">To order - Create an account, click on the menu, select desired items and click on the basket icon.
+ To place order click the basket button in the bar at the bottom. Select time and store location and click checkout.   Any other queries contact :- Superbeansadmin@gmail.com</mutableString>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="Kp7-Tr-4pQ"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Terms and Conditions" id="317-Ij-Sp4"/>
+                    <navigationItem key="navigationItem" title="Help" id="317-Ij-Sp4"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Urj-vh-dz7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3586" y="1510"/>
+            <point key="canvasLocation" x="3585.507246376812" y="1509.375"/>
         </scene>
         <!--Locations-->
         <scene sceneID="Wuu-cj-MPO">
@@ -982,7 +993,7 @@
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Iay-Ex-D96">
                                                     <rect key="frame" x="16" y="7" width="359.5" height="30"/>
-                                                    <state key="normal" title="Terms and Conditions">
+                                                    <state key="normal" title="Help">
                                                         <color key="titleColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     </state>
                                                     <connections>
