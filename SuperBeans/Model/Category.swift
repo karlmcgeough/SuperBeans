@@ -47,6 +47,7 @@ func downloadCategoriesFromFirebase(completion: @escaping (_ categoryArray: [Cat
         }
             
             completion(categoryArray)
+            //test
 }
     }
     
