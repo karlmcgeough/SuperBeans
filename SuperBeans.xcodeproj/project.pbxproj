@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		34B58343676C4EC43A3F4F2F /* Pods_SuperBeans.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE2443F4ED3FB7A210842E74 /* Pods_SuperBeans.framework */; };
+		B726975113AAAEE7D28D140C /* Pods_SuperBeans.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84F80F6B885DA77042B296D5 /* Pods_SuperBeans.framework */; };
 		B91C311E23DCAC6500CC1EE7 /* ProfileTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B91C311D23DCAC6500CC1EE7 /* ProfileTableViewController.swift */; };
 		B91C312023DCB70D00CC1EE7 /* FinishRegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B91C311F23DCB70D00CC1EE7 /* FinishRegistrationViewController.swift */; };
 		B938681C23E6514200710EFC /* PreviousOrdersTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B938681B23E6514200710EFC /* PreviousOrdersTableViewController.swift */; };
@@ -19,6 +19,8 @@
 		B978A6F4234BE56C009A12C3 /* TestConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = B978A6F3234BE56C009A12C3 /* TestConnection.swift */; };
 		B978A6F6234BE5D7009A12C3 /* ImageUploadDownload.swift in Sources */ = {isa = PBXBuildFile; fileRef = B978A6F5234BE5D7009A12C3 /* ImageUploadDownload.swift */; };
 		B978A6F8234BF50C009A12C3 /* ItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B978A6F7234BF50C009A12C3 /* ItemTableViewCell.swift */; };
+		B97B56A62443B8B20032B340 /* StripeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B97B56A52443B8B20032B340 /* StripeService.swift */; };
+		B97B56A92443C6640032B340 /* CardInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B97B56A82443C6640032B340 /* CardInfoViewController.swift */; };
 		B9981D42234E89CB003AB74B /* LocationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9981D41234E89CB003AB74B /* LocationsViewController.swift */; };
 		B9981D44234E8B37003AB74B /* CustomUIElements.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9981D43234E8B37003AB74B /* CustomUIElements.swift */; };
 		B99DD8E423E330C100DB76B6 /* EditProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B99DD8E323E330C100DB76B6 /* EditProfileViewController.swift */; };
@@ -61,11 +63,12 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		9523F51723509924DA743691 /* Pods-SuperBeans.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SuperBeans.debug.xcconfig"; path = "Target Support Files/Pods-SuperBeans/Pods-SuperBeans.debug.xcconfig"; sourceTree = "<group>"; };
-		AE2443F4ED3FB7A210842E74 /* Pods_SuperBeans.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SuperBeans.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6506A90136B6AA761B52DDFF /* Pods-SuperBeans.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SuperBeans.release.xcconfig"; path = "Target Support Files/Pods-SuperBeans/Pods-SuperBeans.release.xcconfig"; sourceTree = "<group>"; };
+		84F80F6B885DA77042B296D5 /* Pods_SuperBeans.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SuperBeans.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B91C311D23DCAC6500CC1EE7 /* ProfileTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTableViewController.swift; sourceTree = "<group>"; };
 		B91C311F23DCB70D00CC1EE7 /* FinishRegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinishRegistrationViewController.swift; sourceTree = "<group>"; };
 		B938681B23E6514200710EFC /* PreviousOrdersTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviousOrdersTableViewController.swift; sourceTree = "<group>"; };
+		B94D5F682443A59500E42902 /* SuperBeans-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SuperBeans-Bridging-Header.h"; sourceTree = "<group>"; };
 		B96EC01123CCB6B0003DEAB6 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		B96EC01323CCBB48003DEAB6 /* MUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MUser.swift; sourceTree = "<group>"; };
 		B972CC1123E4D9230005E627 /* CTHelp.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; path = CTHelp.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -77,6 +80,8 @@
 		B978A6F3234BE56C009A12C3 /* TestConnection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestConnection.swift; sourceTree = "<group>"; };
 		B978A6F5234BE5D7009A12C3 /* ImageUploadDownload.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageUploadDownload.swift; sourceTree = "<group>"; };
 		B978A6F7234BF50C009A12C3 /* ItemTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemTableViewCell.swift; sourceTree = "<group>"; };
+		B97B56A52443B8B20032B340 /* StripeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StripeService.swift; sourceTree = "<group>"; };
+		B97B56A82443C6640032B340 /* CardInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardInfoViewController.swift; sourceTree = "<group>"; };
 		B9894E8723E4C00200F492ED /* absl.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = absl.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B9894E8A23E4C02500F492ED /* EmptyDataSet_Swift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = EmptyDataSet_Swift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B9981D41234E89CB003AB74B /* LocationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationsViewController.swift; sourceTree = "<group>"; };
@@ -106,7 +111,7 @@
 		B9F3F3CA2350E43F004E089C /* DetailImageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailImageCollectionViewCell.swift; sourceTree = "<group>"; };
 		B9F3F3CC2350FE56004E089C /* Basket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Basket.swift; sourceTree = "<group>"; };
 		B9F3F3CE23510B52004E089C /* BasketViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasketViewController.swift; sourceTree = "<group>"; };
-		F45B23ED9A8D1913205BB951 /* Pods-SuperBeans.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SuperBeans.release.xcconfig"; path = "Target Support Files/Pods-SuperBeans/Pods-SuperBeans.release.xcconfig"; sourceTree = "<group>"; };
+		E7636545BD9D43ABDA3CFEEE /* Pods-SuperBeans.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SuperBeans.debug.xcconfig"; path = "Target Support Files/Pods-SuperBeans/Pods-SuperBeans.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,7 +119,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				34B58343676C4EC43A3F4F2F /* Pods_SuperBeans.framework in Frameworks */,
+				B726975113AAAEE7D28D140C /* Pods_SuperBeans.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -132,7 +137,7 @@
 				B972CC1123E4D9230005E627 /* CTHelp.bundle */,
 				B9894E8A23E4C02500F492ED /* EmptyDataSet_Swift.framework */,
 				B9894E8723E4C00200F492ED /* absl.framework */,
-				AE2443F4ED3FB7A210842E74 /* Pods_SuperBeans.framework */,
+				84F80F6B885DA77042B296D5 /* Pods_SuperBeans.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -140,8 +145,8 @@
 		43216A62A616F875439BB427 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				9523F51723509924DA743691 /* Pods-SuperBeans.debug.xcconfig */,
-				F45B23ED9A8D1913205BB951 /* Pods-SuperBeans.release.xcconfig */,
+				E7636545BD9D43ABDA3CFEEE /* Pods-SuperBeans.debug.xcconfig */,
+				6506A90136B6AA761B52DDFF /* Pods-SuperBeans.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -208,6 +213,7 @@
 			isa = PBXGroup;
 			children = (
 				B9A64EEB234A99A900118FEA /* CategoryCollectionViewController.swift */,
+				B97B56A82443C6640032B340 /* CardInfoViewController.swift */,
 				B978A6ED234BA2DB009A12C3 /* ItemsTableViewController.swift */,
 				B978A6F1234BAA66009A12C3 /* AddItemsViewController.swift */,
 				B9981D41234E89CB003AB74B /* LocationsViewController.swift */,
@@ -218,6 +224,7 @@
 				B91C311D23DCAC6500CC1EE7 /* ProfileTableViewController.swift */,
 				B99DD8E323E330C100DB76B6 /* EditProfileViewController.swift */,
 				B938681B23E6514200710EFC /* PreviousOrdersTableViewController.swift */,
+				B94D5F682443A59500E42902 /* SuperBeans-Bridging-Header.h */,
 			);
 			path = "Main Views";
 			sourceTree = "<group>";
@@ -241,6 +248,7 @@
 				B9CF141523759BEB00E016B7 /* Order.swift */,
 				B9AFB84B23918CFB00576F53 /* Favourites.swift */,
 				B96EC01323CCBB48003DEAB6 /* MUser.swift */,
+				B97B56A52443B8B20032B340 /* StripeService.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -252,12 +260,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B9A64EE6234A90E100118FEA /* Build configuration list for PBXNativeTarget "SuperBeans" */;
 			buildPhases = (
-				D06755F19C913A32FDD87616 /* [CP] Check Pods Manifest.lock */,
+				0CF39283D6E96F4260DF433F /* [CP] Check Pods Manifest.lock */,
 				B9A64ECE234A90DF00118FEA /* Sources */,
 				B9A64ECF234A90DF00118FEA /* Frameworks */,
 				B9A64ED0234A90DF00118FEA /* Resources */,
 				B9E4089123E4BE200098175A /* Embed Frameworks */,
-				DF9152D614AFF3DE6627D6CD /* [CP] Embed Pods Frameworks */,
+				28B48D67D06E1DD3F8C7B852 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -280,6 +288,7 @@
 				TargetAttributes = {
 					B9A64ED1234A90DF00118FEA = {
 						CreatedOnToolsVersion = 11.0;
+						LastSwiftMigration = 1140;
 					};
 				};
 			};
@@ -316,7 +325,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		D06755F19C913A32FDD87616 /* [CP] Check Pods Manifest.lock */ = {
+		0CF39283D6E96F4260DF433F /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -338,7 +347,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		DF9152D614AFF3DE6627D6CD /* [CP] Embed Pods Frameworks */ = {
+		28B48D67D06E1DD3F8C7B852 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -366,8 +375,10 @@
 				B9A64EEE234A9A1E00118FEA /* CategoryCollectionViewCell.swift in Sources */,
 				B978A6F0234BA431009A12C3 /* Item.swift in Sources */,
 				B9A64ED6234A90DF00118FEA /* AppDelegate.swift in Sources */,
+				B97B56A92443C6640032B340 /* CardInfoViewController.swift in Sources */,
 				B978A6F2234BAA66009A12C3 /* AddItemsViewController.swift in Sources */,
 				B9F3F3CD2350FE56004E089C /* Basket.swift in Sources */,
+				B97B56A62443B8B20032B340 /* StripeService.swift in Sources */,
 				B9CF141623759BEB00E016B7 /* Order.swift in Sources */,
 				B91C311E23DCAC6500CC1EE7 /* ProfileTableViewController.swift in Sources */,
 				B96EC01423CCBB48003DEAB6 /* MUser.swift in Sources */,
@@ -532,9 +543,10 @@
 		};
 		B9A64EE7234A90E100118FEA /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9523F51723509924DA743691 /* Pods-SuperBeans.debug.xcconfig */;
+			baseConfigurationReference = E7636545BD9D43ABDA3CFEEE /* Pods-SuperBeans.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = QD7FMVCLYT;
@@ -550,6 +562,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.karlmcgeough.SuperBeans;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "SuperBeans/Main Views/SuperBeans-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -557,9 +571,10 @@
 		};
 		B9A64EE8234A90E100118FEA /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F45B23ED9A8D1913205BB951 /* Pods-SuperBeans.release.xcconfig */;
+			baseConfigurationReference = 6506A90136B6AA761B52DDFF /* Pods-SuperBeans.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = QD7FMVCLYT;
@@ -574,6 +589,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.karlmcgeough.SuperBeans;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "SuperBeans/Main Views/SuperBeans-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};

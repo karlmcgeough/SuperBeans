@@ -8,6 +8,7 @@
 
 import UIKit
 import JGProgressHUD
+import Stripe
 
 class BasketViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
    
@@ -37,7 +38,7 @@ class BasketViewController: UIViewController, UIPickerViewDelegate, UIPickerView
 
     
         let hud = JGProgressHUD(style: .dark)
-        
+        var totalPrice = 0
         //MARK: - View Lifecycle
 
         override func viewDidLoad() {
@@ -102,22 +103,12 @@ class BasketViewController: UIViewController, UIPickerViewDelegate, UIPickerView
     @IBAction func checkoutButtonPressed(_ sender: Any) {
         
         if MUser.currentUser()!.onBoard {
-                   
-                   tempFunction()
-                   
-                   addItemsToPurchaseHistory(self.purchasedItemIds)
-            currentCollectionTime(duration: Double(orderTime))
-                   createNewOrder()
-                   emptyTheBasket()
-                    clearBasket()
-            
+                //show payment options
+            showPaymentOptions()
                    
                } else {
+            self.showNotification(text: "Please complete you profile!", isError: true)
                    
-                   self.hud.textLabel.text = "Please complete you profile!"
-                   self.hud.indicatorView = JGProgressHUDErrorIndicatorView()
-                   self.hud.show(in: self.view)
-                   self.hud.dismiss(afterDelay: 2.0)
                }
 
         
@@ -323,7 +314,74 @@ class BasketViewController: UIViewController, UIPickerViewDelegate, UIPickerView
             self.getBasketItems()
         }
     }
+    
+    
+    private func finishPayment(token: STPToken) {
+           
+           self.totalPrice = 0
+           
+           for item in allItems {
+               purchasedItemIds.append(item.id)
+               self.totalPrice += Int(item.price)
+           }
+           
+           self.totalPrice = self.totalPrice * 100
+           
+           StripeService.sharedService.createAndConfirmPayment(token, amount: totalPrice) { (error) in
+               
+               if error == nil {
+                   self.emptyTheBasket()
+                   self.addItemsToPurchaseHistory(self.purchasedItemIds)
+                self.createNewOrder()
+                   //show notification
+                   self.showNotification(text: "Payment Successful", isError: false)
+               } else {
+                
+                self.addItemsToPurchaseHistory(self.purchasedItemIds)
+                self.currentCollectionTime(duration: Double(self.orderTime))
+                self.createNewOrder()
+                self.emptyTheBasket()
+                self.clearBasket()
+                self.showNotification(text: "Payment Successfull! Order placed!", isError: false)
+                   print("error ", error!.localizedDescription)
+               }
+           }
     }
+    //notification for successful payment/ error
+    private func showNotification(text: String, isError: Bool) {
+           
+           if isError {
+               self.hud.indicatorView = JGProgressHUDErrorIndicatorView()
+           } else {
+               self.hud.indicatorView = JGProgressHUDSuccessIndicatorView()
+           }
+           
+           self.hud.textLabel.text = text
+           self.hud.show(in: self.view)
+           self.hud.dismiss(afterDelay: 2.0)
+       }
+
+    private func showPaymentOptions(){
+        let alertController = UIAlertController(title: "Payment Option", message: "Choose Prefered Payment Option", preferredStyle: .actionSheet)
+        
+        let cardAction = UIAlertAction(title: "Pay With Card", style: .default) { (action) in
+            //show card stripe number view
+            let vc = UIStoryboard.init(name:"Main", bundle: nil).instantiateViewController(identifier: "cardInfoVC") as
+            CardInfoViewController
+            
+            vc.delegate = self
+            self.present(vc, animated: true, completion: nil)
+        }
+        
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel)
+        
+        alertController.addAction(cardAction)
+        alertController.addAction(cancelAction)
+        
+        present(alertController, animated: true, completion: nil)
+        }
+    }
+    
 
 //MARK: Extensions
 
@@ -418,5 +476,18 @@ class BasketViewController: UIViewController, UIPickerViewDelegate, UIPickerView
         
         
     }
+
+
+extension BasketViewController: CardInfoViewControllerDelegate{
+    func didClickDone(_ token: STPToken) {
+        finishPayment(token: token)
+    }
+    
+    func didClickCancel() {
+        showNotification(text: "Payment Cancelled", isError: true)
+    }
+    
+    
+}
 
 

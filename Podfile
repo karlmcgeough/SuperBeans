@@ -20,5 +20,7 @@ pod 'NVActivityIndicatorView/AppExtension'
 pod 'JGProgressHUD'
 pod 'PayPal-iOS-SDK'
 pod 'CTHelp'
+pod 'Stripe'
+pod 'Alamofire'
 
 end

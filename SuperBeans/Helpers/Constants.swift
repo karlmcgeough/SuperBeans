@@ -8,6 +8,13 @@
 
 import Foundation
 
+enum Constats {
+    static let publishableKey = "pk_test_QVYQqbrTevBmyP5HpaEwoI6A005qbgIHuN"
+    static let baseURLString = "http://localhost:3000/"
+    static let defaultCurrency = "gbp"
+    static let defaultDescription = "Purchased From SuperBeans Coffee"
+}
+
 //IDS AND KEYS
 public let kSTORAGEREFERENCE = "gs://superbeansstore.appspot.com/"
 
